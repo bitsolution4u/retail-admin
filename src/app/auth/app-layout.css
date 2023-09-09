@@ -1,0 +1,15 @@
+.cw-shadow-for-auth-layout {
+  position: relative;
+}
+
+.cw-shadow-for-auth-layout::after {
+  position: absolute;
+  background-color: #0000004a;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  z-index: 0;
+}

@@ -125,7 +125,7 @@ const Login = () => {
   // };
   return (
     <>
-      <Card>
+      <Card sx={{ bgcolor: '#ffffffd6', zIndex: 2, position: 'relative' }}>
         <CardContent>
           <Box
             sx={{
