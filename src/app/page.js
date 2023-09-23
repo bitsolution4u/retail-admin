@@ -24,7 +24,10 @@ export default async function Profile({ params }) {
    */ return (
     <main>
       <div className="flex justify-center h-[80vh] items-center">
-        <Login />
+        {/* <RoundLoader /> */}
+        {/* <SingleRoundLoader/> */}
+        {/* <SpinLoader /> */}
+        {/* <Login /> */}
       </div>
     </main>
   );

@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        cwgreen: '#7367f0',
+        cwred: '#ed6c02',
+      },
+      overflow: {
+        'y-auto': 'auto',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,4 +22,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

@@ -5,16 +5,20 @@ import { forwardRef } from 'react';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
-const TextFieldStyled = styled(TextField)(({ theme }) => ({
+const TextFieldStyled = styled(TextField)(({ theme, font }) => ({
   alignItems: 'flex-start',
   '& .MuiInputLabel-root': {
     transform: 'none',
     lineHeight: 1.154,
     position: 'relative',
-    zIndex:0,
+    zIndex: 0,
+    fontWeight: font,
     marginBottom: theme.spacing(1),
     fontSize: theme.typography.body2.fontSize,
-    color: `${theme.palette.text.primary} !important`,
+    color:
+      font === 'bold'
+        ? '#4b4b4bde'
+        : `${theme.palette.text.primary} !important`,
   },
   '& .MuiInputBase-root': {
     borderRadius: 8,
@@ -162,13 +166,15 @@ const TextFieldStyled = styled(TextField)(({ theme }) => ({
 // eslint-disable-next-line react/display-name
 const CustomTextField = forwardRef((props, ref) => {
   // ** Props
-  const { size = 'small', InputLabelProps, ...rest } = props;
+  const { size = 'small', InputLabelProps, font = '', ...rest } = props;
+  console.log(font);
 
   return (
     <TextFieldStyled
       size={size}
       inputRef={ref}
       {...rest}
+      font={font}
       variant="filled"
       InputLabelProps={{ ...InputLabelProps, shrink: true }}
     />

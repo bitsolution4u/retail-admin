@@ -3,6 +3,7 @@ import { Box, createTheme, ThemeProvider } from '@mui/material';
 import React from 'react';
 import './app-layout.css';
 
+
 const AuthLayout = ({ children }) => {
   const authStyle = {
     backgroundImage: 'linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%)',
@@ -18,6 +19,7 @@ const AuthLayout = ({ children }) => {
       },
     },
   });
+  
   return (
     <ThemeProvider theme={themeColor}>
       <Box
